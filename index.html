@@ -1,0 +1,36 @@
+<html data-theme="dark">
+	<head>
+		<title>Character Prompt Generator</title>
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"></title>
+	</head>
+	<main class="container">
+	<h2>Character Prompt Generator</h2>
+		<div class="grid">
+		<div>
+			<button class="secondary outline" id="appearanceBtn" onclick="fn_updateAppearance()">Generate new appearance</button>
+			<ul>
+				<li id="attEyes"></li>
+				<li id="attHair"></id>
+			</ul>
+		</div>
+		<div>
+			<button class="secondary outline" onclick="fn_updatePersonal()">Generate new personal traits</button>
+				<ul id="attPersonal"></ul>
+			</div>
+	</div>
+	<article>
+	<p>Prompts can be used with ChatGPT or similiar to write intros, novel like descriptions, etc</p>
+
+	<pre><code id="promptText">&gt; <i>Please write a novel-like introduction to the following character</i>
+	<u>Name:</u>
+	<u>Appearance:</u> <span id="appearancePrompt"></span>
+	<u>Personality:</u> <span id="personalPrompt"></span></code></pre>
+	<button class="btn" data-clipboard-target="#promptText">Copy to Clipboard</button>
+	<footer><a href="example.html">Example ChatGPT output</a></footer>
+	</article>
+	<footer class="container">Built with <a href="https://picocss.com">Pico, a Minimalist and Responsive CSS framework</a></footer>
+	</main>
+	<script = src="app.js"></script>
+	<script = src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+	<script = src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+</html>
